@@ -1,0 +1,30 @@
+<p>hero works! ff</p>
+
+<form [formGroup]="hero">
+  <label>Id</label><input type="number" formControlName="id">
+  <label>Name</label><input type="text" formControlName="name">
+  <label>Realname</label><input type="text" formControlName="realName">
+  <label>Place</label><input type="text" formControlName="place">
+  <label>Year</label><input type="date" formControlName="debutYear">
+
+
+  <button type="submit"  (click)="reactiveForms()" >click me Tarzan</button>
+  </form>
+
+
+
+<button (click)="getAll()">Get all</button>
+<button (click)="getHeroById(22)">Get by id</button>
+<button (click)="delete(22)">Delete</button>
+<!-- <button (click)="create()">Get all</button> -->
+
+<div *ngFor="let item of heroList">
+  <p>Name {{item.name}} Id {{item.id}} <button (click)="delete(item.id)">X</button>
+  <mat-icon aria-hidden="false" fontIcon="delete" (click)="delete(item.id)"></mat-icon> |
+  <mat-icon aria-hidden="false" fontIcon="check" (click)="getHeroById(item.id)"></mat-icon>
+  <a routerLink="/test">klik</a> |
+  <a routerLink="/test/2">data</a> |
+  <a routerLink="/test/{{item.id}}">variable</a>
+</p>
+
+</div>
