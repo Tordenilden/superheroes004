@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'hero', component: HeroComponent },
   { path: 'test', component: TestComponent },
   { path: 'test/:id', component: TestComponent },
+  { path: 'IDunnoKnow/:id', component: TestComponent }, // this is not working
   // { path: 'banan', component: TestComponent },
   // { path: 'banan/:id', component: TestComponent },
 
